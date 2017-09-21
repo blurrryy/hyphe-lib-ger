@@ -1,9 +1,9 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.hyphe = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 const hyphe = require('./lib/hyphe-lib-ger');
 
-module.exports.id = (id) => {
+module.exports.id = (code, id) => {
   let t = document.getElementById(id).innerHTML;
-  hyphe('HTML',t, (o) => {
+  hyphe(code,t, (o) => {
     document.getElementById(id).innerHTML = o;
   })
 }
@@ -15,6 +15,9 @@ let mode = 'HTML';
 let hypheMode = (m) => {
   if (m == "HTML") {
     mode = 'HTML';
+    return true;
+  } else if (m == "uni") {
+    mode = 'uni';
     return true;
   }
   return false;
@@ -28,6 +31,8 @@ let hypheWord = (inputWord, callback) => {
     } else {
       if (mode == 'HTML') {
         word = word + '&shy;' + h;
+      } else if (mode == "uni") {
+        word = word + String.fromCharCode(173) + h;
       }
     }
   });
@@ -37,8 +42,18 @@ let multihypheWord = (inputString, callback) => {
   let outputWord = '';
   splitString(inputString, (splittedString) => {
     splittedString.forEach((wordArray, index) => {
-      if (wordArray == "") {
-        outputWord = outputWord + ' ';
+      if (wordArray.match(/[^a-zA-ZöäüÖÜÄß]/g) != null) {
+        let char = wordArray.match(/[^a-zA-ZöäüÖÜÄß]/g)[0].charCodeAt(0);
+        let addChar;
+        if (char == 10) {
+          // to be tested
+          // addChar = "<br>";
+          addChar = String.fromCharCode(10);
+        } else {
+          addChar = String.fromCharCode(char);
+        }
+        outputWord = outputWord + addChar;
+
       } else {
         hypheWord(wordArray, (word) => {
           outputWord = outputWord + word;
@@ -49,11 +64,11 @@ let multihypheWord = (inputString, callback) => {
   callback(outputWord);
 };
 let splitString = (inputWord, callback) => {
-  let matchedWords = inputWord.match(/([a-zA-Z]+[öÖüÜäÄß])\w+|([a-zA-Z])\w+|\,|\-|\.|\?|\!|/g);
+  let matchedWords = inputWord.match(/[a-zA-ZöäüÖÜÄß]+|\W/g);
   callback(matchedWords);
 };
 module.exports = (config, string, callback) => {
-  if(hypheMode(config)) {
+  if (hypheMode(config)) {
     multihypheWord(string, (s) => {
       callback(s);
     })
