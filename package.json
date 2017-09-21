@@ -1,7 +1,7 @@
 {
   "name": "hyphenation-lib-german",
   "description": "use hyphenation and hyphenation.de to produce a HTML and unicode output",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "app.js",
   "author": "Daniel Rienas",
   "license": "MIT",
