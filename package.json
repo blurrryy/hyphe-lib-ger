@@ -1,7 +1,7 @@
 {
   "name": "hyphe-lib-ger",
   "description": "use hyphenation and hyphenation.de to produce a HTML and unicode output",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/hyphe-lib-ger.js",
   "author": "Daniel Rienas (https://github.com/blurrryy)",
   "license": "MIT",
