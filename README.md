@@ -1,5 +1,6 @@
 # hyphe-lib-ger.js 
 ## Adding soft-hyphens to German text
+[CHANGELOG](CHANGELOG.md)
 ### About
 using the packages [hypher](https://github.com/bramstein/hypher)
 and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse a normal, german text adding soft-hyphens to allow soft-hyphens in older browsers and Google Chrome.
