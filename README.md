@@ -1,4 +1,5 @@
 # hyphe-lib-ger.js 
+[![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 ## Adding soft-hyphens to German text
 ### About
 using the packages [hypher](https://github.com/bramstein/hypher)
