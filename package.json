@@ -1,7 +1,7 @@
 {
   "name": "hyphe-lib-ger",
   "description": "Parse German text to add soft-hyphens in HTML or Unicode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/hyphe-lib-ger.js",
   "author": "Daniel Rienas (https://github.com/blurrryy)",
   "license": "MIT",
