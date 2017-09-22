@@ -1,7 +1,7 @@
 # hyphe-lib-ger.js 
 ## Adding soft-hyphens to German text
 ### About
-using the packages [hyphenation](https://github.com/bramstein/hypher)
+using the packages [hypher](https://github.com/bramstein/hypher)
 and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse a normal, german text adding soft-hyphens to allow soft-hyphens in older browsers and Google Chrome.
 
 The HTML-Code that is added:
@@ -16,7 +16,7 @@ It is also possible to get an Unicode (CharCode 173) output but configurating th
 ````
 // In your Terminal use
 
-npm i --save hype-lib-ger
+npm i --save hyphe-lib-ger
 
 // In your JavaScript file use
 
