@@ -10,7 +10,7 @@ The HTML-Code that is added:
 &shy;
 ````
 
-It is also possible to get an Unicode (CharCode 173) output but configurating the parser als 'uni'.
+It is also possible to get an Unicode (CharCode 173) output by configurating the parser as 'uni'.
 
 ### Install
 

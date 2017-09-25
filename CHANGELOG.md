@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 - Full HTML output also for all unicode chars
 
+## [1.0.2] - 2017-09-25
+### Added
+- Fix a bug where numbers wheren't parsed
+
 ## [1.0.1] - 2017-09-22
 ### Added
 - CHANGELOG
