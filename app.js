@@ -1,9 +1,8 @@
-const hyphe = require('./lib/hyphe-lib-ger');
+const hyphe = require("./lib/hyphe-lib-ger");
 
-hyphe('HTML','Alle meine 13 Entchen, schwimmen auf dem See!', (h) => {
-  console.log(h);
-});
-
-hyphe('uni','Alle meine 13 Entchen, \n schwimmen auf dem See.', (h) => {
-  console.log(h);
-});
+console.log("HTML Output:");
+console.log(hyphe("Alle meine Entchön,\n schwimmen auf dem See!"));
+console.log("\nUnicode Output:");
+console.log(
+  hyphe("Alle meine Entchön,\nschwimmen auf dem See!", { mode: "uni" })
+);
