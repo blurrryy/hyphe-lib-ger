@@ -60,4 +60,4 @@ typings/
 # My Testfiles
 app.js*
 browser.js*
-browser-package/
+webpack.config.js*

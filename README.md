@@ -1,6 +1,6 @@
 # hyphe-lib-ger.js
 
-## Adding soft-hyphens to German text
+## Add soft-hyphens to German text
 
 [CHANGELOG](CHANGELOG.md)
 
@@ -11,7 +11,7 @@ and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse
 
 The HTML-Code that is added:
 
-```
+```html
 &shy;
 ```
 
@@ -19,19 +19,21 @@ It is also possible to get an Unicode (CharCode 173) output by configurating the
 
 ### Install
 
-```
-// In your Terminal use
+In your terminal use
 
+```bash
 npm i --save hyphe-lib-ger
+```
 
-// In your JavaScript file use
+In your JavaScript file use
 
-const hypheLib = require('hyphe-lib-ger')
+```js
+const hypheLib = require("hyphe-lib-ger");
 ```
 
 ### Usage
 
-```
+```js
 hypheLib(Text, { Options });
 ```
 
@@ -58,23 +60,24 @@ lineBreak: String (default: \<br>)
 
 ### Example
 
-```
+```js
 const hyphe = require("hyphe-lib-ger");
 
-console.log(
-  hyphe("Alle meine Entchön,\nschwimmen auf dem See!")
-);
+console.log(hyphe("Alle meine Entchön,\nschwimmen auf dem See!"));
 
 /*
 Will return:
-
 Al&shy;le mei&shy;ne Ent&shy;chön,<br>schwim&shy;men auf dem See!
 */
 ```
 
-### Browserified version (still uses version 1.0.2)
+### Browserfied version
 
-You can also use it in your browser by importing the .js oder the minified .js file
+The browserfied version is now also part of the npm package!
+You can also use it in your browser by importing the .js file
+
+The library can be called by using `HypeLib.run()`
+
 Just see the browser-package folder for an example
 
-A working example with this lib and vue.js is seen [here](https://blurrryy.github.io)
+A working example with this lib (v1.0.2) and vue.js is seen [here](https://blurrryy.github.io)
