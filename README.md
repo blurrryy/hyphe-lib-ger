@@ -1,4 +1,6 @@
-# hyphe-lib-ger.js
+
+# hyphe-lib-ger.js 
+[![npm version](https://badge.fury.io/js/hyphe-lib-ger.svg)](https://badge.fury.io/js/hyphe-lib-ger)
 
 ## Add soft-hyphens to German text
 
