@@ -1,6 +1,6 @@
+# hyphe-lib-ger.js
 
-# hyphe-lib-ger.js 
-[![npm version](https://badge.fury.io/js/hyphe-lib-ger.svg)](https://badge.fury.io/js/hyphe-lib-ger)
+[![npm version](https://badge.fury.io/js/hyphe-lib-ger.svg)](https://badge.fury.io/js/hyphe-lib-ger) [![](https://data.jsdelivr.com/v1/package/npm/hyphe-lib-ger/badge)](https://www.jsdelivr.com/package/npm/hyphe-lib-ger)
 
 ## Add soft-hyphens to German text
 
@@ -8,7 +8,7 @@
 
 ### About
 
-using the packages [hypher](https://github.com/bramstein/hypher)
+Using the packages [hypher](https://github.com/bramstein/hypher)
 and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse a normal, german text adding soft-hyphens to allow soft-hyphens in older browsers and Google Chrome.
 
 The HTML-Code that is added:

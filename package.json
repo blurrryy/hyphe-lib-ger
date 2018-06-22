@@ -3,6 +3,7 @@
   "description": "Automatically add soft-hyphens to German text. (HTML&Unicode)",
   "version": "2.1.0",
   "main": "lib/hyphe-lib-ger.js",
+  "browser": "browser-package/hyphelibger.js",
   "author": "Daniel Rienas (https://github.com/blurrryy)",
   "license": "MIT",
   "repository": {
