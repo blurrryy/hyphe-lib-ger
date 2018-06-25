@@ -82,4 +82,4 @@ The library can be called by using `HypeLib.run()`
 
 Just see the browser-package folder for an example
 
-A working example with this lib (v1.0.2) and vue.js is seen [here](https://blurrryy.github.io)
+A working example with this lib (v2.1.1) and Angular6 is seen [here](https://blurrryy.github.io)
