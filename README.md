@@ -9,15 +9,15 @@
 ### About
 
 Using the packages [hypher](https://github.com/bramstein/hypher)
-and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse a normal, german text adding soft-hyphens to allow soft-hyphens in older browsers and Google Chrome.
+and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse a normal, German text adding soft-hyphens to allow soft-hyphens in older browsers and Google Chrome.
 
-The HTML-Code that is added:
+The HTML code that is added:
 
 ```html
 &shy;
 ```
 
-It is also possible to get an Unicode (CharCode 173) output by configurating the parser as 'uni'.
+It is also possible to get an unicode (173) output by configurating the parser as 'uni'.
 
 ### Install
 
@@ -60,6 +60,14 @@ lineBreak: String (default: \<br>)
 
 - sets the string that is used for the linebreak in HTML-mode
 
+zwspAfterSlash: Boolean (default: true)
+
+- adds a zero-width space after a forward slash
+
+zwsp: String (default: \<wbr>)
+
+- sets the string that is used for the zero-width space in HTML-mode
+
 ### Example
 
 ```js
@@ -82,4 +90,4 @@ The library can be called by using `HypeLib.run()`
 
 Just see the browser-package folder for an example
 
-A working example with this lib (v2.1.1) and Angular6 is seen [here](https://blurrryy.github.io)
+A working example with this lib and Angular6 is seen [here](https://blurrryy.github.io)
