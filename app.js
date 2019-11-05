@@ -1,10 +1,7 @@
-const hyphe = require("./lib/hyphe-lib-ger");
+const hyphe = require("./lib/hyphe-lib-ger-v3");
 
-console.log(hyphe("Alle meine Entchön,\nschwimmen auf dem See/Teich!"));
-console.log("\nUnicode Output:");
-console.log(
-  hyphe("Alle meine Entchön,\nschwimmen auf dem See/Teich!", {
-    mode: "uni",
-    ignoreLineBreak: true
-  })
-);
+hyphe(
+  `Lass mich dich kurz vorstellen, was hier eigentlich möglich ist: "Hallo, mein Name ist Daniel"`
+).then(res => {
+  console.log(res);
+});

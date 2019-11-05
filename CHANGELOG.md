@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2019-11-05
+
+### Added
+
+- Add the typographizer-js package to produce better typography
+
+### Changed
+
+- The package now returns a promise to support typographizer
+- Reworked the code to get better results from non word characters
+- The options have been completely changed
+- typographize? Wheter or not to use the typographizer-js package
+- ignoreLineBreaks? Ignore all line breaks in the string
+- The default mode now supports unicode
+- escapeToHTML? Switch to escape every soft-hyphen and non word character to it's HTML char code representation
+
 ## [2.2.0] - 2018-06-26
 
 ### Added

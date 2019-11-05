@@ -11,13 +11,7 @@
 Using the packages [hypher](https://github.com/bramstein/hypher)
 and [hyphenation.de](https://github.com/bramstein/hyphenation-patterns) to parse a normal, German text adding soft-hyphens to allow soft-hyphens in older browsers and Google Chrome.
 
-The HTML code that is added:
-
-```html
-&shy;
-```
-
-It is also possible to get an unicode (173) output by configurating the parser as 'uni'.
+New: Use [typographizer-js](https://github.com/ovlb/typographizer-js) to produce better looking typography
 
 ### Install
 
@@ -30,13 +24,15 @@ npm i --save hyphe-lib-ger
 In your JavaScript file use
 
 ```js
-const hypheLib = require("hyphe-lib-ger");
+const hyphe = require("hyphe-lib-ger");
 ```
 
 ### Usage
 
 ```js
-hypheLib(Text, { Options });
+hyphe(Text, { Options }).then(text => {
+  console.log(text); // Output the formatted text
+});
 ```
 
 Text: String
@@ -47,47 +43,35 @@ The possible options (not required)
 
 ### Options
 
-mode: String (default: html)
+typographize: Boolean (default: false)
 
-- html: adds &shy; as the soft-hyphen
-- uni: adds the charCode 173 as the soft-hyphen
+- parse the text with typograhize-js first
 
 ignoreLineBreaks: Boolean (default: false)
 
 - ignore line breaks completely?
 
-lineBreak: String (default: \<br>)
+escapeToHTML: Boolean (default: true)
 
-- sets the string that is used for the linebreak in HTML-mode
-
-zwspAfterSlash: Boolean (default: true)
-
-- adds a zero-width space after a forward slash
-
-zwsp: String (default: \<wbr>)
-
-- sets the string that is used for the zero-width space in HTML-mode
+- escape all non-word characters to their HTML charcode alternative
 
 ### Example
 
 ```js
 const hyphe = require("hyphe-lib-ger");
 
-console.log(hyphe("Alle meine Entchön,\nschwimmen auf dem See!"));
+hyphe(
+  `Lass mich dich kurz vorstellen, was hier eigentlich möglich ist: "Hallo, mein Name ist Daniel"`
+).then(res => {
+  console.log(res);
+});
 
 /*
 Will return:
-Al&shy;le mei&shy;ne Ent&shy;chön,<br>schwim&shy;men auf dem See!
+Lass&#32;mich&#32;dich&#32;kurz&#32;vor&#173;stel&#173;len&#44;&#32;was&#32;hier&#32;ei&#173;gent&#173;lich&#32;mög&#173;lich&#32;ist&#58;&#32;&#8220;Hal&#173;lo&#44;&#32;mein&#32;Na&#173;me&#32;ist&#32;Da&#173;ni&#173;el&#8221;
 */
 ```
 
-### Browserfied version
-
-The browserfied version is now also part of the npm package!
-You can also use it in your browser by importing the .js file
-
-The library can be called by using `HypeLib.run()`
-
-Just see the browser-package folder for an example
+### Example
 
 A working example with this lib and Angular6 is seen [here](https://blurrryy.github.io)
