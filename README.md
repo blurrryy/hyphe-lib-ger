@@ -61,14 +61,14 @@ escapeToHTML: Boolean (default: true)
 const hyphe = require("hyphe-lib-ger");
 
 hyphe(
-  `Lass mich dich kurz vorstellen, was hier eigentlich möglich ist: "Hallo, mein Name ist Daniel"`
+  `Lass mich dir kurz vorstellen, was hier eigentlich möglich ist: "Hallo, mein Name ist Daniel"`
 ).then(res => {
   console.log(res);
 });
 
 /*
 Will return:
-Lass&#32;mich&#32;dich&#32;kurz&#32;vor&#173;stel&#173;len&#44;&#32;was&#32;hier&#32;ei&#173;gent&#173;lich&#32;mög&#173;lich&#32;ist&#58;&#32;&#8220;Hal&#173;lo&#44;&#32;mein&#32;Na&#173;me&#32;ist&#32;Da&#173;ni&#173;el&#8221;
+Lass&#32;mich&#32;dir&#32;kurz&#32;vor&#173;stel&#173;len&#44;&#32;was&#32;hier&#32;ei&#173;gent&#173;lich&#32;mög&#173;lich&#32;ist&#58;&#32;&#8220;Hal&#173;lo&#44;&#32;mein&#32;Na&#173;me&#32;ist&#32;Da&#173;ni&#173;el&#8221;
 */
 ```
 
