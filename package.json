@@ -6,6 +6,7 @@
   "browser": "browser-package/hyphelibger.js",
   "author": "Daniel Rienas (https://github.com/blurrryy)",
   "scripts": {
+    "pretest": "eslint lib/hyphe-lib-ger.js",
     "test": "jest",
     "test:live": "jest --watch",
     "webpack": "webpack"
@@ -24,6 +25,7 @@
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
+    "eslint": "^6.6.0",
     "jest": "^24.9.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
